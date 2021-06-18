@@ -9,9 +9,9 @@
  */
 int main(void)
 {
-	int i=48;
-	int j=49;
-	int k=50;
+	int i = 48;
+	int j = 49;
+	int k = 50;
 
 	while  ((i < 56) && (j < 57) && (k < 58))
 	{
