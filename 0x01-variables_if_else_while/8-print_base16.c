@@ -5,20 +5,19 @@
  *
  *Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	char i;
+	int i;
+	char j;
 
-	for (i = 'a'; i <= 'z'; i++)
+	for (i = 0; i <= 9; i++)
 	{
-		putchar(i);
+		putchar(i + '0');
 	}
-
-	for (i = 'A'; i <= 'Z'; i++)
+	for (j = 'a'; j <= 'f'; j++)
 	{
-		putchar(i);
+		putchar(j);
 	}
-	putchar('\n')
+	putchar('\n');
 	return (0);
 }
