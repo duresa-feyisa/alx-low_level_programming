@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <stdio.h>
 /**
  *main - Entry point
  *
@@ -9,11 +9,11 @@ int main(void)
 {
 	int i, j, k, l;
 
-	for (k = 48; k <= 57; k++)
+	for (k = 48; k <= 50; k++)
 	{
-		for (i = 48; i < 57; i++)
+		for (i = 48; i < 50; i++)
 		{
-			for (j = 48; j <= 57; j++)
+			for (j = 48; j <= 50; j++)
 			{
 				for (l = 49; l <= 57; l++)
 				{
