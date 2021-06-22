@@ -1,0 +1,29 @@
+#include "holberton.h"
+
+/**
+ * main - check the code for ALX School students.
+ *
+ * Return: Always 0 (Success)
+ */
+void print_alphabet(void);
+
+int main(void)
+{
+	print_alphabet();
+	return (0);
+}
+/**
+ * print_alphabet - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+void print_alphabet(void)
+{
+	int i;
+
+	for (i = 97; i < 123; i++)
+	{
+		_putchar(i);
+	}
+	_putchar('\n');
+}
