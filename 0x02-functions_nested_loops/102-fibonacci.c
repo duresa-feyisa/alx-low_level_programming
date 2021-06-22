@@ -1,26 +1,31 @@
-#include "holberton.h"
 #include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+  * main - Prints the first 52 fibonacci numbers
+  *
+  * Return: Nothing!
+  */
 int main(void)
 {
-	int t1, t2, t3, i;
+	int i = 0;
+	long j = 1, k = 2;
 
-	t1 = 1;
-	t2 = 2;
-	t3 = t1 + t2;
-	printf("%d, %d, ", t1, t2);
-	for (i = 1; i < 49; i++)
+	while (i < 50)
 	{
-		printf("%d, ", t3);
-		t1 = t2;
-		t2 = t3;
-		t3 = t1 + t2;
+		if (i == 0)
+			printf("%ld", j);
+		else if (i == 1)
+			printf(", %ld", k);
+		else
+		{
+			k += j;
+			j = k - j;
+			printf(", %ld", k);
+		}
+
+		++i;
 	}
+
 	printf("\n");
 	return (0);
-} 
+}
