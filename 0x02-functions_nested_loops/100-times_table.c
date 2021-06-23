@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * main - check the code for ALX School students.
- * @n - integer value
+ * print_times_table - check the code for ALX School students.
+ * @n :- integer value
  * Return: void.
  */
 void print_times_table(int n)
@@ -40,10 +40,8 @@ void print_times_table(int n)
 						_putchar(32);
 						_putchar(32);
 					}
-
 					_putchar(z + '0');
 				}
-
 			}
 			_putchar('\n');
 		}
