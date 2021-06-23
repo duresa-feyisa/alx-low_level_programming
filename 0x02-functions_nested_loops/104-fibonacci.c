@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - print first 98 Fibonacci numbers
  *
@@ -7,24 +6,17 @@
  */
 int main(void)
 {
-	int i;
-	unsigned long a = 1;
-	unsigned long b = 2;
-	unsigned long c = 3;
+ 	int i = 0;
+	unsigned long int j = 1, k = 2;
 
-	printf("1, 2, ");
-	for (i = 3; i <= 98; i++)
-	{
-		c = a + b;
-		printf("%lu", c);
-		a = b;
-		b = c;
-
-
-		if (i < 98)
-			printf(", ");
-	}
-	printf("\n");
-
-	return (0);
+    	printf("1, 2");
+    	while (i < 96)
+    	{
+		k = k + j;
+         	j = k - j;
+            	printf(", %lu", k);
+        	i++;
+    	}
+    	printf("\n");
+    	return (0);
 }
