@@ -5,7 +5,6 @@
  *
  * Return: Nothing
  */
-
 void more_numbers(void)
 {
 	int i, j;
@@ -17,7 +16,6 @@ void more_numbers(void)
 			if (j > 9)
 			{
 				_putchar(1 + '0');
-
 			}
 			if (j < 10)
 				_putchar(j + '0');
