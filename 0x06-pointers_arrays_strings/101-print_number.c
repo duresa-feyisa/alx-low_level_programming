@@ -1,40 +1,47 @@
 #include "holberton.h"
 
 /**
- * print_number - takes an integer and prints it with _putchar
- * @n: integer to print
- *
- * Return: void
+ * print_number - Function that prints an integer.
+ * @n: int type number
+ * Description: Can only use _putchar to print.
  */
 void print_number(int n)
 {
-	if (n > 999)
+	long m; /* power of 10 */
+	int c; /* boolean check */
+	long num; /* convert int to long */
+
+	num = n;
+	/* negatives */
+	if (num < 0)
 	{
-		_putchar(((n / 1000) % 10) + '0');
-		_putchar(((n / 100) % 10) + '0');
-		_putchar(((n / 10) % 10) + '0');
-		_putchar((n % 10) + '0');
+		num *= -1;
+		_putchar('-');
 	}
-	else if (n > 99)
+
+	/* count up */
+	m = 1;
+	c = 1;
+	while (c)
 	{
-		_putchar(((n / 100) % 10) + '0');
-		_putchar(((n / 10) % 10) + '0');
-		_putchar((n % 10) + '0');
+		if (num / (m * 10) > 0)
+			m *= 10;
+		else
+			c = 0;
 	}
-	else if (n > 9)
+
+	/* count down */
+	while (num >= 0)
 	{
-		_putchar(((n / 10) % 10) + '0');
-		_putchar((n % 10) + '0');
-	}
-	else if (n >= 0)
-	{
-		_putchar((n % 10) + '0');
-	}
-	else if (n < 0)
-	{
-		n = n * -1;
-		_putchar(45);
-		_putchar(((n / 10) % 10) + '0');
-		_putchar((n % 10) + '0');
+		if (m == 1)
+		{
+			_putchar(num % 10 + '0');
+			num = -1;
+		}
+		else
+		{
+			_putchar((num / m % 10) + '0');
+			m /= 10;
+		}
 	}
 }
